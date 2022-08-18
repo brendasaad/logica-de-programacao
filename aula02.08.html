@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <title>Lógica de Programação Javascript</title>
+        <meta charset="UTF-8"/>
+      </head>
+      <body>
+        <h1>Lógica de Programação com Javascript</h1>
+
+        <script>
+
+            var nome = prompt('digite seu nome');
+            var comprimento = nome.length;
+
+            switch(comprimento){
+                case 1: 
+                  alert('oi');
+                  break;
+
+                case 2 :
+                    alert('ola');
+                    break;
+                    
+                case 3 :
+                    alert('teste');
+                    break;
+
+                default:
+                    alert('não deu');
+
+
+            }
+
+            var numero = 10;
+
+            switch(typeof numero){
+                 case "number": 
+                    alert('é numero');
+                    break;
+
+                case "string":
+                    alert('é string');
+                    break;              
+                    
+            }
+
+            if(typeof numero === "number"){
+                alert('é numero');
+            } else if (typeof numero === "string"){
+                alert('é string');
+            }
+
+
+        </script>
+
+      </body>
+</html>
