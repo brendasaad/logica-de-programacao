@@ -33,8 +33,24 @@
       function jogar() {
         nJogador = document.querySelector("#meuNumero").value;
         nComputador = sortear(5);
+
+        nJogador = parseInt(nJogador);
+
+        var total = nJogador + nComputador;
+
+        var resultado = total % 2 === 0 ? "par" : "impar";
+
+        verificarResulado(resultado);
+      }
+
+      function verificarResulado(resultado) {
+        if (minhaEScolha === resultado) {
+          alert("Eu ganhei");
+        } else {
+          alert("O computador ganhou");
+        }
+        console.log("nJjogador", nJogador);
         console.log("nComputador", nComputador);
-        console.log("nJogador", nJogador);
       }
     </script>
   </body>
