@@ -47,7 +47,6 @@
           logradouro: "rua belezura",
           n: 5,
           cidade: "São Paulo",
-          estado: "SP",
           cep: "22222-222",
         }),
       },
@@ -58,7 +57,6 @@
           logradouro: "rua belezura",
           n: 20,
           cidade: "São Paulo",
-          estado: "Sp",
           cep: "22222-222",
         }),
       },
@@ -78,7 +76,6 @@
         endereco: new Endereco({
           logradouro: "Av belezura",
           n: 41,
-          cidade: "São Paulo",
           estado: "SP",
           cep: "33333-333",
         }),
@@ -86,11 +83,29 @@
     ];
 
     var enderecos = [];
+    var msg = "";
 
     for (var i = 0; i < alunos.length; i++) {
       enderecos[i] = alunos[i].endereco;
     }
 
+    enderecos[1].estado = "SP";
+    enderecos[2].estado = "SP";
+    enderecos[3].cidade = "Rio de Janeiro";
+    enderecos[4].cidade = "São Paulo";
+
     console.log(enderecos);
+
+    for (var i = 0; i < enderecos.length; i++) {
+      var endereco = enderecos[i];
+      for (prop in endereco) {
+        if (endereco[prop]) {
+          msg += "i: " + i + "; " + prop + ": " + endereco[prop] + "<br>";
+        }
+      }
+      msg += "<hr>";
+    }
+
+    document.querySelector("#output").innerHTML = msg;
   </script>
 </html>
