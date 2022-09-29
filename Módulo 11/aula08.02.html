@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Programação Javascript</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Lógica de Programação com Javascript</h1>
+  </body>
+
+  <script>
+    //fibonacci
+    // 1 1 2 3 5 8 13
+
+    var chamou1 = 0;
+    var chamou2 = 0;
+
+    function fibonacci(n) {
+      chamou1++;
+      var a = 1;
+      var b = 0;
+      var temp;
+
+      while (n--) {
+        temp = a;
+        a = a + b;
+        b = temp;
+      }
+      return b;
+    }
+
+    // 1 1 2 3 5 8
+    // console.log(fibonacci(3)); // 2
+    console.log(fibonacci(6)); // 8
+    console.log("chamou1", chamou1);
+
+    function fibonacci2(n) {
+      chamou2++;
+      if (n <= 2) return 1;
+      return fibonacci2(n - 1) + fibonacci2(n - 2);
+    }
+    console.log("---------");
+    console.log(fibonacci2(3)); // 2
+    console.log(fibonacci2(6)); // 8
+    console.log("chamou2", chamou2);
+  </script>
+</html>
