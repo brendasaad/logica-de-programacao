@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lógica de Programação Javascript</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Lógica de Programação com Javascript</h1>
+  </body>
+
+  <script>
+    function testeSalto() {
+      for (var i = 0; i < 10; i++) {
+        if (i === 5) {
+          //continue;
+          //break;
+          return "teste";
+        }
+        console.log(i);
+      }
+      console.log("-------");
+      return "fim da função";
+    }
+
+    var teste = testeSalto();
+    console.log(teste);
+  </script>
+</html>
