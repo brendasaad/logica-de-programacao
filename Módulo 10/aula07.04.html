@@ -13,9 +13,9 @@
     var arrDobrado = dobrar(arr);
 
     function dobrar(arr) {
-      var arrTemp = arr;
-      for (var i = 0; i < arrTemp.length; i++) {
-        arrTemp[i] = arrTemp[i] * 2;
+      var arrTemp = [];
+      for (var i = 0; i < arr.length; i++) {
+        arrTemp[i] = arr[i] * 2;
       }
 
       return arrTemp;
